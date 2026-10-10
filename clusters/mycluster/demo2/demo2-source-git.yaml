@@ -2,10 +2,13 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: demo-source-git
+  name: demo2-source-git
   namespace: flux-system
 spec:
   interval: 1m0s
   ref:
     branch: master
-  url: https://github.com/zmouto/slotz4u
+  url: https://github.com/yogeshraheja/KubernetesVotingApp
+  secretRef:
+    name: devopsinaction-secret
+    
